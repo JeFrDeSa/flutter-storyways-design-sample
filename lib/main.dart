@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/core/utilities/theme_data.dart' as theme_data;
+import 'package:design_sample/feature/view/book_search_page.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const AppInstance());
@@ -17,7 +19,7 @@ class AppInstance extends StatelessWidget {
       darkTheme: theme_data.darkTheme,
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
-        body: Placeholder(),
+        body: BookSearchPage(key: constants.bookSearchPageKey),
       ),
     );
   }
