@@ -18,7 +18,7 @@ final String theIslandJson = File('test/test_utilities/fixtures/book_the_island.
 const Book theComputer = Book(
   title: "The Computer",
   author: "Sam Samko",
-  continueRead: false,
+  continueRead: true,
   releaseDate: "20.11.2011",
   coverImagePath: "assets/images/covers/computer.jpg",
 );
