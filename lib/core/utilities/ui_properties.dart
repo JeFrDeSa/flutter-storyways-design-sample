@@ -25,6 +25,7 @@ const double iconSizeSmall = 20;
 const double paddingSmall= 5;
 const double paddingMedium = 10;
 const double paddingLarge = 15;
+const double paddingExtraLarge = 20;
 
 const double bottomNavigationBarHeight = 60;
 
@@ -36,5 +37,8 @@ const double newSectionEntryRememberMeButtonSize = 50;
 const double continueSectionCoverImageSize = 100;
 const double continueSectionButtonSize = 40;
 const double continueSectionSize = 150;
+
+const Color searchBarShadowColor = Color.fromRGBO(0x2c, 0x88, 0x5c, 0.1);
+const double searchBarElevation = 4.0;
 
 
