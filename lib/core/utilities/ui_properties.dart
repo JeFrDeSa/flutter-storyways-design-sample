@@ -32,3 +32,9 @@ const double leadingNewSectionEntryImageHeight = 120;
 const double leadingNewSectionEntryImageWidth = 95;
 
 const double newSectionEntryRememberMeButtonSize = 50;
+
+const double continueSectionCoverImageSize = 100;
+const double continueSectionButtonSize = 40;
+const double continueSectionSize = 150;
+
+
