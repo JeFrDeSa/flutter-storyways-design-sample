@@ -11,6 +11,10 @@ const ValueKey continueSectionEntryImageKey = ValueKey("continueSectionEntryImag
 const ValueKey newSectionEntryKey = ValueKey("newSectionEntryKey");
 const ValueKey bockSearchNavigationBarKey = ValueKey("bockSearchNavigationBarKey");
 
+ValueKey determineImageKey({required int index}) {
+  return ValueKey("${continueSectionEntryImageKey.value}$index");
+}
+
 const String continueSectionName = "Continue";
 const String newSectionName = "New";
 const String searchHintText = "Search for something";
