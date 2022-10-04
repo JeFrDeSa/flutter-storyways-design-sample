@@ -16,6 +16,7 @@ void main() {
     // (A)ssert -> that the expected results have occurred.
     expect(theIsland.title, expectedResult.title);
     expect(theIsland.author, expectedResult.author);
+    expect(theIsland.continueRead, expectedResult.continueRead);
     expect(theIsland.releaseDate, expectedResult.releaseDate);
     expect(theIsland.coverImagePath, expectedResult.coverImagePath);
     expect(theIsland, expectedResult);
