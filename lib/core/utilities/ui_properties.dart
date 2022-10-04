@@ -19,8 +19,16 @@ final Image notesIcon = Image.asset("assets/images/icons/bottom_item3_icon.png")
 
 const BorderRadius defaultWidgetBoarderRadius = BorderRadius.all(Radius.circular(15.0));
 
+const double iconSizeExtraSmall = 15;
 const double iconSizeSmall = 20;
 
+const double paddingSmall= 5;
 const double paddingMedium = 10;
+const double paddingLarge = 15;
 
 const double bottomNavigationBarHeight = 60;
+
+const double leadingNewSectionEntryImageHeight = 120;
+const double leadingNewSectionEntryImageWidth = 95;
+
+const double newSectionEntryRememberMeButtonSize = 50;
