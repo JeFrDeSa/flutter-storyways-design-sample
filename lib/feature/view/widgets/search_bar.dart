@@ -17,7 +17,7 @@ class SearchBarState extends ConsumerState<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: ui_properties.searchBarElevation,
+      elevation: ui_properties.defaultElevation,
       shadowColor: ui_properties.searchBarShadowColor,
       child: Container(
         padding: const EdgeInsets.only(

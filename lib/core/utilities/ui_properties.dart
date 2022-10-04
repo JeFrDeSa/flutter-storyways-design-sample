@@ -19,6 +19,8 @@ final Image notesIcon = Image.asset("assets/images/icons/bottom_item3_icon.png")
 
 const BorderRadius defaultWidgetBoarderRadius = BorderRadius.all(Radius.circular(15.0));
 
+const double defaultElevation = 4.0;
+
 const double iconSizeExtraSmall = 15;
 const double iconSizeSmall = 20;
 
@@ -39,6 +41,9 @@ const double continueSectionButtonSize = 40;
 const double continueSectionSize = 150;
 
 const Color searchBarShadowColor = Color.fromRGBO(0x2c, 0x88, 0x5c, 0.1);
-const double searchBarElevation = 4.0;
+const Color searchResultShadowColor = Color.fromRGBO(0x2c, 0x88, 0x5c, 0.3);
 
+
+const double leadingSearchResultEntryImageHeight = 100;
+const double leadingSearchResultEntryImageWidth = 75;
 
