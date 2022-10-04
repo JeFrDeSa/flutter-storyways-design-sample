@@ -6,6 +6,7 @@ import 'package:design_sample/feature/view/widgets/continue_section_entry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+/// Defines the list for the continue section books.
 class ContinueSection extends ConsumerStatefulWidget {
   const ContinueSection({Key? key}) : super(key: key);
 

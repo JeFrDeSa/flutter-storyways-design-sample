@@ -6,6 +6,7 @@ import 'package:design_sample/feature/view/widgets/new_section_entry/new_section
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+/// Defines an entry of the new section.
 class NewSectionEntry extends ConsumerWidget {
   final AssetImage backgroundImage;
   final String title;

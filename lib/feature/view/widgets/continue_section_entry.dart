@@ -1,7 +1,9 @@
 import 'package:design_sample/core/utilities/ui_properties.dart' as ui_properties;
+import 'package:design_sample/feature/view/widgets/continue_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+/// Defines an entry of the [ContinueSection].
 class ContinueSectionEntry extends ConsumerWidget {
   final AssetImage backgroundImage;
   final String title;
