@@ -18,6 +18,7 @@ void main() {
     testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       await tester.pumpWidget(widgetTestContainer);
+      await tester.pump();
 
       // (A)ct -> on the object or method under test.
       final continueSectionTitleText = find.text(constants.continueSectionName);
