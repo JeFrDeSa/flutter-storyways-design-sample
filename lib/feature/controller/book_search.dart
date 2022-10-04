@@ -26,7 +26,7 @@ List<Book> _sectionBooks(List<Book> books, bool continueRead) {
   List<Book> sectionRelevantBooks = [];
 
   for (Book book in books) {
-    if (book.continueRead == continueRead) {
+    if (book.continueReading == continueRead) {
       sectionRelevantBooks.add(book);
     }
   }

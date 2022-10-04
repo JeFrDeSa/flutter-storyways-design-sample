@@ -6,7 +6,7 @@ import 'package:design_sample/feature/model/book.dart';
 const Book theIsland = Book(
   title: "The Island",
   author: "Sam Samko",
-  continueRead: false,
+  continueReading: false,
   releaseDate: "03. Feb 2022",
   coverImagePath: "assets/images/covers/island.jpg",
 );
@@ -18,7 +18,7 @@ final String theIslandJson = File('test/test_utilities/fixtures/book_the_island.
 const Book theComputer = Book(
   title: "The Computer",
   author: "Sam Samko",
-  continueRead: true,
+  continueReading: true,
   releaseDate: "20.11.2011",
   coverImagePath: "assets/images/covers/computer.jpg",
 );

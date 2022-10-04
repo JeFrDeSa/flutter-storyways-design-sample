@@ -2,9 +2,10 @@ import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/core/utilities/theme_data.dart' as theme_data;
 import 'package:design_sample/feature/view/book_search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const AppInstance());
+  runApp(const ProviderScope(child: AppInstance()));
 }
 
 /// Defines the application root widget.
