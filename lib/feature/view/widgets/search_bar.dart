@@ -1,4 +1,5 @@
 import 'package:design_sample/core/utilities/ui_properties.dart' as ui_properties;
+import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/feature/controller/book_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,7 +40,7 @@ class SearchBarState extends ConsumerState<SearchBar> {
                   ref.read(searchProvider.state).update((state) => inputValue);
                 },
               ),
-              hintText: 'Search for Something',
+              hintText: constants.searchHintText,
               border: InputBorder.none),
           onChanged: (value) {
             inputValue = value;

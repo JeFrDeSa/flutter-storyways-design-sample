@@ -1,6 +1,6 @@
 import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/core/utilities/ui_properties.dart' as ui_properties;
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class ContinueSectionTitle extends StatelessWidget {
   const ContinueSectionTitle({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class ContinueSectionTitle extends StatelessWidget {
         top: ui_properties.paddingExtraLarge,
         bottom: ui_properties.paddingExtraLarge,
       ),
-      child: const Text(constants.continueSectionName),
+      child: Text(constants.continueSectionName, style: Theme.of(context).textTheme.bodyText2),
     );
   }
 }

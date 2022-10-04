@@ -12,3 +12,4 @@ const ValueKey bockSearchNavigationBarKey = ValueKey("bockSearchNavigationBarKey
 
 const String continueSectionName = "Continue";
 const String newSectionName = "New";
+const String searchHintText = "Search for something";
