@@ -1,4 +1,5 @@
 import 'package:design_sample/core/utilities/ui_properties.dart' as ui_properties;
+import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/feature/view/widgets/continue_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,22 +9,26 @@ class ContinueSectionEntry extends ConsumerWidget {
   final AssetImage backgroundImage;
   final String title;
   final String author;
+  final int listIndex;
 
   const ContinueSectionEntry({
     Key? key,
     required this.backgroundImage,
     required this.title,
     required this.author,
+    required this.listIndex,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     return Column(
       children: <Widget>[
         Stack(
           alignment: Alignment.bottomRight,
           children: <Widget>[
             Container(
+              key: determineImageKey(index: listIndex),
               height: ui_properties.continueSectionCoverImageSize,
               width: ui_properties.continueSectionCoverImageSize,
               decoration: BoxDecoration(
@@ -52,5 +57,10 @@ class ContinueSectionEntry extends ConsumerWidget {
         Text(author, style: Theme.of(context).textTheme.subtitle2),
       ],
     );
+  }
+
+  @visibleForTesting
+  ValueKey determineImageKey({required int index}) {
+    return ValueKey("${constants.continueSectionEntryImageKey.value}$index");
   }
 }

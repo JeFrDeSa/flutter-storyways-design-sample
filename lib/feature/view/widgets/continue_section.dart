@@ -44,6 +44,7 @@ class ContinueSectionState extends ConsumerState<ContinueSection> {
               backgroundImage: AssetImage(bookList[index].coverImagePath),
               title: bookList[index].title,
               author: bookList[index].author,
+              listIndex: index,
             ),
           );
         },
