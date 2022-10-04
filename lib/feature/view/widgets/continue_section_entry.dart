@@ -28,7 +28,7 @@ class ContinueSectionEntry extends ConsumerWidget {
           alignment: Alignment.bottomRight,
           children: <Widget>[
             Container(
-              key: determineImageKey(index: listIndex),
+              key: constants.determineImageKey(index: listIndex),
               height: ui_properties.continueSectionCoverImageSize,
               width: ui_properties.continueSectionCoverImageSize,
               decoration: BoxDecoration(
@@ -57,10 +57,5 @@ class ContinueSectionEntry extends ConsumerWidget {
         Text(author, style: Theme.of(context).textTheme.subtitle2),
       ],
     );
-  }
-
-  @visibleForTesting
-  ValueKey determineImageKey({required int index}) {
-    return ValueKey("${constants.continueSectionEntryImageKey.value}$index");
   }
 }

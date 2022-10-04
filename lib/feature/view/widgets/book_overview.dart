@@ -57,6 +57,7 @@ class BookOverviewState extends ConsumerState<BookOverview> {
               title: newBookList[recalculatedIndex].title,
               author: newBookList[recalculatedIndex].author,
               releaseDate: newBookList[recalculatedIndex].releaseDate,
+              listIndex: index,
             );
           }
         },

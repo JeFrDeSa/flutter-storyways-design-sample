@@ -1,3 +1,4 @@
+import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/feature/view/widgets/continue_section_entry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -26,7 +27,7 @@ void main() {
       final playButton = find.byType(MaterialButton);
       final titleText = find.text(book_fixtures.theComputer.title);
       final authorText = find.text(book_fixtures.theComputer.author);
-      final container = tester.widget<Container>(find.byKey(testWidget.determineImageKey(index: index)));
+      final container = tester.widget<Container>(find.byKey(constants.determineImageKey(index: index)));
       String boxDecorationProperties = (container.decoration! as BoxDecoration).toString();
 
       // (A)ssert -> that the expected results have occurred.
