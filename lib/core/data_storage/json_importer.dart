@@ -22,8 +22,6 @@ class JsonImporter {
 
   /// Returns the local stored books.
   Future<List<Book>> readBooksFromDataStorage() async {
-    await Future.delayed(const Duration(milliseconds: 250));
-
     List<Book> result = [];
     for (Map<String, dynamic> jsonBook in allBooks) {
       result.add(Book.fromJson(jsonBook));

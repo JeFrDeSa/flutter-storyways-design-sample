@@ -43,7 +43,9 @@ const double continueSectionSize = 150;
 const Color searchBarShadowColor = Color.fromRGBO(0x2c, 0x88, 0x5c, 0.1);
 const Color searchResultShadowColor = Color.fromRGBO(0x2c, 0x88, 0x5c, 0.3);
 
-
 const double leadingSearchResultEntryImageHeight = 100;
 const double leadingSearchResultEntryImageWidth = 75;
+
+const double searchBarHeight = 60;
+
 
