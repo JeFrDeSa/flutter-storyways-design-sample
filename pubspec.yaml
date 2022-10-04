@@ -30,6 +30,15 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # State Management --- A simple way to access state from anywhere in your application while robust and testable.
+  flutter_riverpod: 2.0.0
+
+  # Value equality --- Equatable overrides '==' and hashCode to make it possible two compare two objects.
+  equatable: 2.0.5
+
+  # Keyboard visibility state --- Flutter plugin for discovering the state of the soft-keyboard visibility on Android and iOS.
+  flutter_keyboard_visibility: 5.3.0
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -73,6 +82,11 @@ flutter:
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
+  # Adds specific assets to the application
+  assets:
+    - assets/images/covers/
+    - assets/images/icons/
+
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
@@ -92,3 +106,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  # Adds specific fonts to the application
+  fonts:
+    - family: rubik_regular
+      fonts:
+        - asset: assets/fonts/rubik_regular.ttf
