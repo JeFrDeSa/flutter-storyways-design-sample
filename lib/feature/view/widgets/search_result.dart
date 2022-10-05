@@ -36,10 +36,11 @@ class SearchResultState extends ConsumerState<SearchResult> {
         itemCount: searchResult.length,
         itemBuilder: (context, index) {
           return SearchResultEntry(
-            key: ValueKey("${constants.continueSectionEntryKey.value}$index"),
+            key: constants.determineListEntryKey(key: constants.searchResultEntryKey, index: index),
             backgroundImage: AssetImage(searchResult[index].coverImagePath),
             title: searchResult[index].title,
             author: searchResult[index].author,
+            listIndex: index
           );
         },
       ),

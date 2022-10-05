@@ -1,3 +1,4 @@
+import 'package:design_sample/core/utilities/constants.dart' as constants;
 import 'package:design_sample/core/utilities/ui_properties.dart' as ui_properties;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,12 +8,14 @@ class SearchResultEntry extends ConsumerWidget {
   final AssetImage backgroundImage;
   final String title;
   final String author;
+  final int listIndex;
 
   const SearchResultEntry({
     Key? key,
     required this.backgroundImage,
     required this.title,
     required this.author,
+    required this.listIndex,
   }) : super(key: key);
 
   @override
@@ -32,6 +35,7 @@ class SearchResultEntry extends ConsumerWidget {
                     bottom: ui_properties.paddingMedium,
                   ),
                   child: Container(
+                    key: constants.determineListEntryKey(key: constants.searchResultEntryImageKey, index: listIndex),
                     decoration: BoxDecoration(
                       borderRadius: ui_properties.defaultWidgetBoarderRadius,
                       image: DecorationImage(image: backgroundImage, fit: BoxFit.cover),

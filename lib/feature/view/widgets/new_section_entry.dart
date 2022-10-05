@@ -12,6 +12,7 @@ class NewSectionEntry extends ConsumerWidget {
   final String title;
   final String author;
   final String releaseDate;
+  final int listIndex;
 
   const NewSectionEntry({
     Key? key,
@@ -19,6 +20,7 @@ class NewSectionEntry extends ConsumerWidget {
     required this.title,
     required this.author,
     required this.releaseDate,
+    required this.listIndex,
   }) : super(key: key);
 
   @override
@@ -29,7 +31,7 @@ class NewSectionEntry extends ConsumerWidget {
           Expanded(
             child: Row(
               children: <Widget>[
-                LeadingNewSectionEntryImage(backgroundImage: backgroundImage),
+                LeadingNewSectionEntryImage(backgroundImage: backgroundImage, listIndex: listIndex),
                 const SizedBox(width: ui_properties.paddingLarge),
                 NewSectionEntryBookInformation(title: title, author: author, releaseDate: releaseDate),
               ],

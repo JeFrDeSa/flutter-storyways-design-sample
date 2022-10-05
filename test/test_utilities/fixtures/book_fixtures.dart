@@ -19,7 +19,7 @@ const Book theComputer = Book(
   title: "The Computer",
   author: "Sam Samko",
   continueReading: true,
-  releaseDate: "20.11.2011",
+  releaseDate: "20. Nov 2011",
   coverImagePath: "assets/images/covers/computer.jpg",
 );
 

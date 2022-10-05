@@ -21,12 +21,12 @@ final continueSectionProvider = FutureProvider((ref) async {
   return _sectionBooks(books, true);
 });
 
-/// Returns a filtered list of [Book]s based on its 'continueRead' property.
-List<Book> _sectionBooks(List<Book> books, bool continueRead) {
+/// Returns a filtered list of [Book]s based on its 'continueReading' property.
+List<Book> _sectionBooks(List<Book> books, bool continueReading) {
   List<Book> sectionRelevantBooks = [];
 
   for (Book book in books) {
-    if (book.continueReading == continueRead) {
+    if (book.continueReading == continueReading) {
       sectionRelevantBooks.add(book);
     }
   }

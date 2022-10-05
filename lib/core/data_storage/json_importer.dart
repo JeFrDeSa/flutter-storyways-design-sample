@@ -18,6 +18,11 @@ class JsonImporter {
     {"title":"The Fork","author":"Susan Moller","continueReading":"true","releaseDate": "11. Dez 2011","coverImagePath": "assets/images/covers/fork.jpg"},
     {"title":"The Mountain","author":"Samenta Bix","continueReading":"true","releaseDate": "01. Feb 2011","coverImagePath": "assets/images/covers/mountain.jpg"},
     {"title":"The Typewriter","author":"Sam Samko","continueReading":"true","releaseDate": "03. Jan 2022","coverImagePath": "assets/images/covers/typewriter.jpg"},
+    {"title":"The Typewriter I","author":"Sam Samko","continueReading":"true","releaseDate": "01. Jan 2022","coverImagePath": "assets/images/covers/typewriter.jpg"},
+    {"title":"The Typewriter II","author":"Sam Samko","continueReading":"true","releaseDate": "02. Feb 2022","coverImagePath": "assets/images/covers/typewriter.jpg"},
+    {"title":"The Typewriter III","author":"Sam Samko","continueReading":"true","releaseDate": "03. Mrz 2022","coverImagePath": "assets/images/covers/typewriter.jpg"},
+    {"title":"The Typewriter IV","author":"Sam Samko","continueReading":"true","releaseDate": "04. Apr 2022","coverImagePath": "assets/images/covers/typewriter.jpg"},
+    {"title":"The Typewriter V","author":"Sam Samko","continueReading":"true","releaseDate": "05. Mai 2022","coverImagePath": "assets/images/covers/typewriter.jpg"},
   ];
 
   /// Returns the local stored books.

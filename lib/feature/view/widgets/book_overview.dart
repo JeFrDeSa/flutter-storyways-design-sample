@@ -45,6 +45,7 @@ class BookOverviewState extends ConsumerState<BookOverview> {
             return const SizedBox();
           }
         },
+        key: constants.newSectionListKey,
         itemCount: newBookList.length + _widgetList.length,
         itemBuilder: (context, index) {
           if (_widgetList.containsKey(index)) {
@@ -52,11 +53,12 @@ class BookOverviewState extends ConsumerState<BookOverview> {
           } else {
             int recalculatedIndex = index - _widgetList.length;
             return NewSectionEntry(
-              key: ValueKey("${constants.newSectionEntryKey.value}$recalculatedIndex"),
+              key: constants.determineListEntryKey(key: constants.newSectionEntryKey, index: recalculatedIndex),
               backgroundImage: AssetImage(newBookList[recalculatedIndex].coverImagePath),
               title: newBookList[recalculatedIndex].title,
               author: newBookList[recalculatedIndex].author,
               releaseDate: newBookList[recalculatedIndex].releaseDate,
+              listIndex: index,
             );
           }
         },

@@ -15,9 +15,10 @@ void main() {
   );
 
   group('Layout representation', () {
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show the continue and new section with their titles when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       await tester.pumpWidget(widgetTestContainer);
+      await tester.pump();
 
       // (A)ct -> on the object or method under test.
       final continueSectionTitleText = find.text(constants.continueSectionName);
@@ -31,5 +32,6 @@ void main() {
       expect(newSectionTitleText, findsOneWidget);
       expect(newSectionEntries, findsWidgets);
     });
+
   });
 }

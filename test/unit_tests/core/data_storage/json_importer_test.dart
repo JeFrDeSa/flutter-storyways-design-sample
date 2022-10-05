@@ -9,7 +9,7 @@ import '../../../test_utilities/fixtures/book_fixtures.dart' as book_fixtures;
 void main() {
   JsonImporter jsonImporter = JsonImporter();
 
-  test('should return the list of books from the data storage when called.', () async {
+  test('should return a list of books from the data storage when called.', () async {
     // (A)rrange -> all necessary preconditions and inputs.
     jsonImporter.allBooks = [
       jsonDecode(book_fixtures.theIslandJson),

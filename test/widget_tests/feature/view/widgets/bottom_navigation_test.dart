@@ -9,7 +9,7 @@ void main() {
   Widget widgetTestContainer = widget_test_container_fixtures.getDefaultWidgetTestContainer(const BottomNavigation());
 
   group('Layout representation', () {
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show the home button and three further buttons when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       await tester.pumpWidget(widgetTestContainer);
 
