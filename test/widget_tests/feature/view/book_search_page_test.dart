@@ -15,7 +15,7 @@ void main() {
 
   group('Layout representation', () {
     // Should <SHOW SOMETHING> when <SOMETHING>
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show a searchbar and a book overview when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       await tester.pumpWidget(testContainer);
 

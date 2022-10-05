@@ -13,7 +13,7 @@ void main() {
   );
 
   group('Layout representation', () {
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show the book information of the search result when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       await tester.pumpWidget(widgetTestContainer);
       await tester.pump();
