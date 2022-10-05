@@ -19,15 +19,16 @@ void main() {
   Widget widgetTestContainer = widget_test_container_fixtures.getDefaultWidgetTestContainer(testWidget);
 
   group('Layout representation', () {
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show the title and author with the cover image when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
+      ValueKey key = constants.determineListEntryKey(key: constants.continueSectionEntryImageKey, index: index);
       await tester.pumpWidget(widgetTestContainer);
 
       // (A)ct -> on the object or method under test.
       final playButton = find.byType(MaterialButton);
       final titleText = find.text(book_fixtures.theComputer.title);
       final authorText = find.text(book_fixtures.theComputer.author);
-      final container = tester.widget<Container>(find.byKey(constants.determineImageKey(index: index)));
+      final container = tester.widget<Container>(find.byKey(key));
       String boxDecorationProperties = (container.decoration! as BoxDecoration).toString();
 
       // (A)ssert -> that the expected results have occurred.

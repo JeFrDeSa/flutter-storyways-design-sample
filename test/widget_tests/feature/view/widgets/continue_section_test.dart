@@ -15,8 +15,7 @@ void main() {
   );
 
   group('Layout representation', () {
-
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show a list of continue section entries when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       await tester.pumpWidget(widgetTestContainer);
       await tester.pump();
@@ -28,21 +27,26 @@ void main() {
       expect(sectionEntries, findsWidgets);
     });
 
-    testWidgets('should show the 5th list entry when scrolled.', (WidgetTester tester) async {
+    testWidgets('should show the 7th continue book list entry when scrolled.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
       ValueKey firstListEntryKey = constants.determineListEntryKey(key: constants.continueSectionEntryKey, index: 0);
-      ValueKey scrolledListEntryKey = constants.determineListEntryKey(key: constants.continueSectionEntryKey, index: 3);
+      ValueKey scrolledListEntryKey = constants.determineListEntryKey(key: constants.continueSectionEntryKey, index: 6);
       await tester.pumpWidget(widgetTestContainer);
       await tester.pump();
 
+      expect(find.byKey(firstListEntryKey), findsOneWidget);
+      expect(find.byKey(scrolledListEntryKey), findsNothing);
+
       // (A)ct -> on the object or method under test.
-      final firstListEntry = find.byKey(firstListEntryKey);
-      await tester.scrollUntilVisible(find.byKey(scrolledListEntryKey), 4);
-      final scrolledListEntry = find.byKey(scrolledListEntryKey);
+      await tester.dragUntilVisible(
+          find.byKey(scrolledListEntryKey),
+          find.byType(ListView),
+          const Offset(-250,0),
+      ).then((value) => null);
 
       // (A)ssert -> that the expected results have occurred.
-      expect(firstListEntry, findsOneWidget);
-      expect(scrolledListEntry, findsOneWidget);
+      expect(find.byKey(firstListEntryKey), findsNothing);
+      expect(find.byKey(scrolledListEntryKey), findsOneWidget);
     });
 
   });

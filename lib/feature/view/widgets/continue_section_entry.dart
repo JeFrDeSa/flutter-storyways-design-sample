@@ -28,7 +28,7 @@ class ContinueSectionEntry extends ConsumerWidget {
           alignment: Alignment.bottomRight,
           children: <Widget>[
             Container(
-              key: constants.determineImageKey(index: listIndex),
+              key: constants.determineListEntryKey(key: constants.continueSectionEntryImageKey, index: listIndex),
               height: ui_properties.continueSectionCoverImageSize,
               width: ui_properties.continueSectionCoverImageSize,
               decoration: BoxDecoration(
