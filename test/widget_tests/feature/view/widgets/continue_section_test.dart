@@ -30,13 +30,14 @@ void main() {
 
     testWidgets('should show the 5th list entry when scrolled.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
-      ValueKey firstListEntryKey = ValueKey("${constants.continueSectionEntryKey.value}0");
-      ValueKey scrolledListEntryKey = ValueKey("${constants.continueSectionEntryKey.value}5");
+      ValueKey firstListEntryKey = constants.determineListEntryKey(key: constants.continueSectionEntryKey, index: 0);
+      ValueKey scrolledListEntryKey = constants.determineListEntryKey(key: constants.continueSectionEntryKey, index: 3);
       await tester.pumpWidget(widgetTestContainer);
+      await tester.pump();
 
       // (A)ct -> on the object or method under test.
       final firstListEntry = find.byKey(firstListEntryKey);
-      await tester.scrollUntilVisible(find.byKey(scrolledListEntryKey), 5);
+      await tester.scrollUntilVisible(find.byKey(scrolledListEntryKey), 4);
       final scrolledListEntry = find.byKey(scrolledListEntryKey);
 
       // (A)ssert -> that the expected results have occurred.

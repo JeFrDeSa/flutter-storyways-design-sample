@@ -40,7 +40,7 @@ class ContinueSectionState extends ConsumerState<ContinueSection> {
           return Container(
             padding: listPadding,
             child: ContinueSectionEntry(
-              key: ValueKey("${constants.continueSectionEntryKey.value}$index"),
+              key: constants.determineListEntryKey(key: constants.continueSectionEntryKey, index: index),
               backgroundImage: AssetImage(bookList[index].coverImagePath),
               title: bookList[index].title,
               author: bookList[index].author,

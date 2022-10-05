@@ -15,6 +15,10 @@ ValueKey determineImageKey({required int index}) {
   return ValueKey("${continueSectionEntryImageKey.value}$index");
 }
 
+ValueKey determineListEntryKey({required ValueKey key, required int index}) {
+  return ValueKey("${key.value}$index");
+}
+
 const String continueSectionName = "Continue";
 const String newSectionName = "New";
 const String searchHintText = "Search for something";
