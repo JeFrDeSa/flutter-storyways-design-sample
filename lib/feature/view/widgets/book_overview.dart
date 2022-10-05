@@ -1,4 +1,5 @@
 import 'package:design_sample/core/utilities/constants.dart' as constants;
+import 'package:design_sample/core/utilities/ui_properties.dart' as ui_properties;
 import 'package:design_sample/feature/controller/book_search.dart';
 import 'package:design_sample/feature/model/book.dart';
 import 'package:design_sample/feature/view/widgets/book_overview/continue_section_title.dart';
@@ -39,9 +40,12 @@ class BookOverviewState extends ConsumerState<BookOverview> {
       },
       child: ListView.separated(
         separatorBuilder: (context, index) {
-          if(index > _widgetList.length-1) {
-            return const Divider();
-          }else{
+          if (index > _widgetList.length - 1) {
+            return const Divider(
+              indent: ui_properties.paddingExtraLarge,
+              endIndent: ui_properties.paddingExtraLarge,
+            );
+          } else {
             return const SizedBox();
           }
         },
