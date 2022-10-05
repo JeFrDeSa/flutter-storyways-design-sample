@@ -18,21 +18,22 @@ void main() {
   ));
 
   group('Layout representation', () {
-    testWidgets('should show the predefined layout when created.', (WidgetTester tester) async {
+    testWidgets('should show the book information and cover image when created.', (WidgetTester tester) async {
       // (A)rrange -> all necessary preconditions and inputs.
+      ValueKey key = constants.determineListEntryKey(key: constants.newSectionEntryImageKey, index: index);
       await tester.pumpWidget(widgetTestContainer);
+      await tester.pump();
 
       // (A)ct -> on the object or method under test.
-      final titleText = find.text(book_fixtures.theComputer.title);
-      final authorText = find.text(book_fixtures.theComputer.author);
+      final titleAndAuthor = tester.widgetList<RichText>(find.byType(RichText)).elementAt(0).text.toPlainText();
       final releaseDate = find.text(book_fixtures.theComputer.releaseDate);
-      final container = tester.widget<Container>(find.byKey(constants.determineImageKey(index: index)));
+      final container = tester.widget<Container>(find.byKey(key));
       String boxDecorationProperties = (container.decoration! as BoxDecoration).toString();
       final rememberMeButton = find.byType(TextButton);
 
       // (A)ssert -> that the expected results have occurred.
-      expect(titleText, findsOneWidget);
-      expect(authorText, findsOneWidget);
+      expect(titleAndAuthor.contains(book_fixtures.theComputer.title), true);
+      expect(titleAndAuthor.contains(book_fixtures.theComputer.author), true);
       expect(releaseDate, findsOneWidget);
       expect(boxDecorationProperties.contains(book_fixtures.theComputer.coverImagePath), true);
       expect(rememberMeButton, findsOneWidget);

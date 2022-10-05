@@ -20,7 +20,7 @@ class LeadingNewSectionEntryImage extends StatelessWidget {
         bottom: ui_properties.paddingMedium,
       ),
       child: Container(
-        key: constants.determineImageKey(index: listIndex),
+        key: constants.determineListEntryKey(key: constants.newSectionEntryImageKey, index: listIndex),
         decoration: BoxDecoration(
           borderRadius: ui_properties.defaultWidgetBoarderRadius,
           image: DecorationImage(image: backgroundImage, fit: BoxFit.cover),
