@@ -8,7 +8,7 @@ void main() {
   runApp(const ProviderScope(child: AppInstance()));
 }
 
-/// Defines the application root widget. ???
+/// Defines the application root widget.
 class AppInstance extends StatelessWidget {
   const AppInstance({Key? key}) : super(key: key);
 
